@@ -1,0 +1,12 @@
+---
+- name: docker-compose build reminder
+  debug:
+    msg: "docker-compose target reminder: if you modify any file in your docker-compose project, remember to trigger its rebuilding by using '-e dct_recreate=True' when executing `ansible-playbook`"
+  when:
+    - dct_reminder == True
+
+- name: Transfer docker-compose project into remote cache directory
+  copy: src="{{ project }}" dest="{{ dct_cache_path }}/" mode="0700"
+
+- name: Configure and launch vpn service
+  docker_service: project_src='{{ dct_cache_path }}/{{ project | basename }}' recreate='{% if dct_recreate == True %}always{% else %}smart{% endif %}'

@@ -1,0 +1,6 @@
+---
+dct_cache_path: "/usr/local/share/docker-compose-target-cache"
+dct_reminder: False
+dct_reminder_message: "mvitale1989.docker-compose-target reminder: if you modify any file in your docker-compose project, remember to trigger its rebuild by using '-e dct_recreate=True' when executing `ansible-playbook`"
+dct_recreate: False
+project: "{{ project | mandatory }}"

@@ -1,0 +1,11 @@
+galaxy_info:
+  author: Mario Vitale
+  description: Deploy a local docker-compose project to a remote host, without needing the remote engine to listen on a TCP port.
+
+  license: BSD
+
+  min_ansible_version: 2.3
+
+  galaxy_tags: [ "docker", "docker-compose", "project", "deploy" ]
+
+dependencies: []
