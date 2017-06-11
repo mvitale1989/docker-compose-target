@@ -3,9 +3,28 @@ galaxy_info:
   description: Deploy a local docker-compose project to a remote host, without needing the remote engine to listen on a TCP port.
 
   license: BSD
+  platforms:
+    - name: Fedora
+      versions:
+        - all
+    - name: GenericLinux
+      versions:
+        - all
+    - name: ArchLinux
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
 
   min_ansible_version: 2.3
 
-  galaxy_tags: [ "docker", "docker-compose", "project", "deploy" ]
+  galaxy_tags: [ "docker", "compose", "project", "deploy" ]
 
 dependencies: []
