@@ -25,6 +25,11 @@ Role variables
   be transferred to the remote host, but the container rebuild logic might not
   detect their change. To force a rebuild and redeploy of your projects, use
   `-e { dct_recreate: True }` while launching the `ansible-playbook` program.
+- `dct_cache_path`: the path to which your docker-compose projects will be
+  copied to.
+- `dct_reminder`: if the message reminding you of the `dct_create` flag annoys
+  you, during the build and deploy task, you can disable it by setting this
+  variable to `False`.
 
 
 Example Playbook
@@ -35,12 +40,13 @@ Example Playbook
         - { role: mvitale1989.docker-compose-target, project: files/project1  }
         - role: mvitale1989.docker-compose-target
           project: ../../docker-compose-projects/project2
+          dct_reminder: False
 
 
 Dependencies
 ------------
 
-- `docker_service` ansible module
+- `docker_service` and `synchronize` ansible modules
 
 
 License
