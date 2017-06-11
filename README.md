@@ -1,8 +1,8 @@
-mvitale1989.docker-compose-target
-=================================
+docker-compose-target
+=====================
 
-Deploy a local docker-compose project to a remote host, without needing the
-remote engine to listen on a TCP port.
+Ansible role to deploy a local docker-compose project to a remote host, without
+needing the remote engine to listen on a TCP port.
 
 Instead of contacting the remote engine by means of its TCP port, this role
 copies over your docker-compose project directory and deploys it from the remote
